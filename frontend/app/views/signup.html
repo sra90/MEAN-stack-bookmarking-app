@@ -1,0 +1,13 @@
+<div id="signup-page" class="container text-center">
+  <label class="bold title">Sign Up</label>
+  <form>
+    <input type="email" class="form-control" placeholder="Email" ng-model="email" required>
+    <input type="password" class="form-control" placeholder="Password" ng-model="password" required>
+    <input type="password" class="form-control" placeholder="Confirm Password" ng-model="confirm_password" required>
+    <span class="error" ng-if="errMsg">{{errMsg}}</span>
+    <input type="submit" class="btn btn-success bold" value="Sign Up" ng-click="signup()" ng-if="!signingup">
+  </form>
+  <h6 ng-if="signingup" class="signing-up bold"><br>Signing you up with BookMark..<br></h6>
+  <h6>Already have an account? <a ng-href="/login">Login</a> here</h6>
+</div>
+
