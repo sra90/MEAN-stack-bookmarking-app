@@ -1,0 +1,14 @@
+<div id="home" class="container">
+	<br><div>
+		<span class="bold">Your Bookmark's</span>
+		(<a ng-href="/new">Add New</a>)
+	</div><br>
+	<ul class="list-unstyled">
+		<li ng-repeat="bookmark in bookmarks">
+			<a href="{{bookmark.url | modifyUrl}}" target="_blank">{{bookmark.url}}</a><br>
+			<span ng-repeat="tag in bookmark.tags track by $index">
+				<u>{{tag}}</u>
+			</span>
+		</li>
+	</ul>
+</div>
