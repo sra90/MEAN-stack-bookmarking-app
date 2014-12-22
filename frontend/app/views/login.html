@@ -1,0 +1,13 @@
+<div id="login" class="container text-center">
+  <label class="bold title">Log In</label>
+  <form>
+    <input type="email" class="form-control" placeholder="Email" ng-model="email" required>
+    <input type="password" class="form-control" placeholder="Password" ng-model="password" required>
+    <span class="error col-xs-12" ng-if="errMsg">{{errMsg}}</span>
+    <input type="submit" class="btn btn-success bold" value="Log In" ng-click="login()" ng-if="!loggingin">
+    <h6 class="bold" ng-if="loggingin"><br>Logging you in..<br></h6>
+  </form>
+  <div>
+  	Don't have an account? <a ng-href="/signup">Sign up</a> here
+  </div>
+</div>
