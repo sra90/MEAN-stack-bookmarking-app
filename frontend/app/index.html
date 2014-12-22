@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html id="bookmarkApp" ng-app="bookmarkApp" class="no-js" xmlns:ng="http://angularjs.org" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html id="bookmarkApp" ng-app="bookmarkApp" class="no-js" xmlns:ng="http://angularjs.org" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html id="bookmarkApp" ng-app="bookmarkApp" class="no-js" xmlns:ng="http://angularjs.org" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html id="bookmarkApp" ng-app="bookmarkApp" class="no-js" xmlns:ng="http://angularjs.org"> 
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>BookMark App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="http://localhost:9000/">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!--[if lte IE 8]>
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-view');
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="bookmark-app">
+        <header>
+          <nav>
+            <a id="app-name" class="bold" ng-href="/">BookMark App</a>
+            <span ng-if="(loggedIn === false)">
+              <a ng-href="/login">Login</a> |
+              <a ng-href="/signup">Sign Up</a>
+            </span>
+            <span class="text-center" ng-if="(loggedIn === true)">
+                Hi {{curUser}}<br>
+                <a href="" ng-click="logout()">Logout</a>
+            </span>
+          </nav>
+        </header>
+        <div id="view-container" ng-view></div>  
+    </div>
+      
+    <footer class="text-center">
+      Copyright &copy; 2014. All rights reserved.
+    </footer>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/config.js"></script>
+        <script src="scripts/initialize.js"></script>
+        <script src="scripts/filters/modifyUrl.js"></script>
+        <script src="scripts/services/cookieService.js"></script>
+        <script src="scripts/services/commonService.js"></script>
+        <script src="scripts/services/otherServices.js"></script>
+        <script src="scripts/controllers/loginCtrl.js"></script>
+        <script src="scripts/controllers/signupCtrl.js"></script>
+        <script src="scripts/controllers/mainCtrl.js"></script>
+        <script src="scripts/controllers/homeCtrl.js"></script>
+        <script src="scripts/controllers/newBookmarkCtrl.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
