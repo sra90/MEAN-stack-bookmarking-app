@@ -1,0 +1,7 @@
+<div id="new-bookmark" class="container text-center">
+	<h4>Add Bookmark</h4>
+	<input type="textbox" class="form-control" ng-model="url" placeholder="URL"><br>
+	<input type="textbox" class="form-control" ng-model="tags" placeholder="Tags (comma separated)"><br>
+	<span class="error" ng-if="errMsg">{{errMsg}}</span>
+	<button class="btn btn-success" ng-click="addNewBookmark(url, tags)">Add</button>
+</div>
