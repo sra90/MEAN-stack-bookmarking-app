@@ -1,10 +1,6 @@
 MEAN-stack-bookmarking-app
 ==========================
 
-Author: Satya Rohit A
-
-Readme
-
 BookmarkApp
 
 
@@ -23,4 +19,5 @@ Backend
 3. node bin/www
 
 
+Author: Satya Rohit A
 
