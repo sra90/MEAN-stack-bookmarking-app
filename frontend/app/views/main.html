@@ -1,0 +1,13 @@
+<div id="popuplar-bookmarks" class="container">
+  <br><h4>Popular Bookmarks</h4>
+  <ul class="list-unstyled">
+    <li ng-repeat="bookmark in bookmarks">
+      	<a href="{{bookmark.url | modifyUrl}}" target="_blank">{{bookmark.url}}</a>
+      	<ng-pluralize count="bookmark.popularity" when="{'1': '(1 time)','other': '({} times)'}">
+		</ng-pluralize>
+      
+    </li>
+  </ul>
+  <img src="../images/ajax-loader.gif" ng-show="loading">
+  <h6 class="load-more" ng-click="getPopularBookmarks()" ng-show="showLoadMore">Load More</h6>
+</div>
