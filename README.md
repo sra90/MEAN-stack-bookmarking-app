@@ -19,5 +19,5 @@ Backend
 3. node bin/www
 
 
-Author: Satya Rohit A
+Author: Satya Rohit
 
